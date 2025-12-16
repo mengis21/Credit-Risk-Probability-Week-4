@@ -9,12 +9,19 @@ __pycache__/
 
 # Data (keep raw and processed data out of git)
 data/
+Technical Content/
+reports/final_report.md
+reports/interim_report.md
 
 # MLflow artifacts
 mlruns/
 
+# Model exports
+models/
+
 # Docker
 *.log
+.docker-config/
 
 # VS Code
 .vscode/

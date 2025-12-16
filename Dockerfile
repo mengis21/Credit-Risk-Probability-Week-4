@@ -8,4 +8,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["bash"]
+ENV PYTHONPATH=/app \
+	MLFLOW_TRACKING_URI=file:/app/mlruns \
+	MODEL_NAME=credit-risk-probability-model \
+	MODEL_STAGE=Production
+
+EXPOSE 8000
+
+CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
