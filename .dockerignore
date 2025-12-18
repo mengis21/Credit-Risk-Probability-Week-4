@@ -1,0 +1,11 @@
+.venv/
+.venv311/
+.pytest_cache/
+__pycache__/
+.git/
+.gitignore
+.dockerignore
+*.pyc
+Technical Content/
+notebooks/
+reports/
